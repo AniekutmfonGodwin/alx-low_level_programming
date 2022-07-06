@@ -12,9 +12,9 @@ int main(void)
 	int i;
 	for (i = 0 ;i<9;i++){
 		_putchar(word[i]);
-		printf("\n");
+		
 	}
-
+	_putchar("\n")
 
 	return (0);
 }
