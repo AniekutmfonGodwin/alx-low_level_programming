@@ -1,35 +1,29 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main -  checks for checks for a digit (0 through 9).
- * Return: Always 0.
+ * print_square - draws a square
+ * @size: length and width of square
+ * Return: void
  */
-int main(void)
-{
-	int x;
 
-	for (x = 1; x <= 100; x++)
+void print_square(int size)
+{
+	int row;
+	int column;
+
+	if (size > 0)
 	{
-		if (x % 3 == 0 || x % 5 == 0)
+		for (row = 0; row < size; row++)
 		{
-			if (x % 3 == 0)
+			for (column = 0; column < size; column++)
 			{
-				printf("Fizz");
+				_putchar('#');
 			}
-			if (x % 5 == 0)
-			{
-				printf("Buzz");
-			}
-		}
-		else
-		{
-			printf("%d", x);
-		}
-		if (x != 100)
-		{
-		putchar(' ');
+			_putchar('\n');
 		}
 	}
-	putchar('\n');
-	return (0);
+	else
+	{
+		_putchar('\n');
+	}
 }
